@@ -19,7 +19,7 @@ type Dict = {
   meta: { title: string; description: string };
   nav: { work: string; packages: string; process: string; about: string; contact: string; cta: string };
   hero: { title: string; lead: string; primary: string; secondary: string; note: string };
-  work: { title: string; lead: string; items: { name: string; sector: string; what: string; url: string }[] };
+  work: { title: string; lead: string; items: { name: string; slug: string; sector: string; what: string; url: string }[] };
   packages: { title: string; lead: string; items: Package[]; maintenance: { name: string; price: string; text: string } };
   process: { title: string; lead: string; steps: { title: string; text: string }[] };
   about: { title: string; paragraphs: string[]; stack: string };
@@ -49,15 +49,15 @@ const nl: Dict = {
     title: "Gebouwd voor mijn eigen bedrijven, en voor die van anderen.",
     lead: "Elke site hieronder draait in de praktijk. Geen concepten, maar werkende sites en applicaties met echte gebruikers.",
     items: [
-      { name: "Apotheek Numansdorp", sector: "Zorg", what: "Website met herhaalrecepten, openingstijden en teampagina", url: "https://apotheeknumansdorp.nl" },
-      { name: "Pharmail", sector: "SaaS", what: "Communicatieportaal tussen apotheken en zorgverleners", url: "https://pharmail.nl" },
-      { name: "Pharmalytic", sector: "SaaS", what: "Tool voor medicatiebeoordelingen", url: "https://pharmalytic.nl" },
-      { name: "Apotrace", sector: "Logistiek", what: "Track en trace voor recepten", url: "https://apotrace.nl" },
-      { name: "Apotheekcijfers", sector: "Data", what: "Dashboard met maandcijfers en groei", url: "https://apotheekcijfers.nl" },
-      { name: "BMI Bewust", sector: "Gezondheid", what: "Website met online intake voor gewichtsbegeleiding", url: "https://bmibewust.nl" },
-      { name: "Stoppen met Roken", sector: "Zorg", what: "Website voor stoppen-met-roken begeleiding", url: "https://hwsmr.nl" },
-      { name: "PharmaClean", sector: "Dienstverlening", what: "Website voor schoonmaak van apotheken en zorgpraktijken", url: "https://pharmaclean.nl" },
-      { name: "Apotheek Zoetermeer", sector: "Zorg", what: "Website voor een nieuwe apotheek", url: "https://apotheekzoetermeer.nl" },
+      { name: "Apotheek Numansdorp", slug: "apotheeknumansdorp", sector: "Zorg", what: "Website met herhaalrecepten, openingstijden en teampagina", url: "https://apotheeknumansdorp.nl" },
+      { name: "Pharmail", slug: "pharmail", sector: "SaaS", what: "Communicatieportaal tussen apotheken en zorgverleners", url: "https://pharmail.nl" },
+      { name: "Pharmalytic", slug: "pharmalytic", sector: "SaaS", what: "Tool voor medicatiebeoordelingen", url: "https://pharmalytic.nl" },
+      { name: "Apotrace", slug: "apotrace", sector: "Logistiek", what: "Track en trace voor recepten", url: "https://apotrace.nl" },
+      { name: "Apotheekcijfers", slug: "apotheekcijfers", sector: "Data", what: "Dashboard met maandcijfers en groei", url: "https://apotheekcijfers.nl" },
+      { name: "BMI Bewust", slug: "bmibewust", sector: "Gezondheid", what: "Website met online intake voor gewichtsbegeleiding", url: "https://bmibewust.nl" },
+      { name: "Stoppen met Roken", slug: "hwsmr", sector: "Zorg", what: "Website voor stoppen-met-roken begeleiding", url: "https://hwsmr.nl" },
+      { name: "PharmaClean", slug: "pharmaclean", sector: "Dienstverlening", what: "Website voor schoonmaak van apotheken en zorgpraktijken", url: "https://pharmaclean.nl" },
+      { name: "Apotheek Zoetermeer", slug: "apotheekzoetermeer", sector: "Zorg", what: "Website voor een nieuwe apotheek", url: "https://apotheekzoetermeer.nl" },
     ],
   },
   packages: {
@@ -146,15 +146,15 @@ const en: Dict = {
     title: "Built for my own companies, and for others.",
     lead: "Every site below is in daily use. No concepts, but working sites and applications with real users.",
     items: [
-      { name: "Apotheek Numansdorp", sector: "Healthcare", what: "Pharmacy website with repeat prescriptions, hours and team page", url: "https://apotheeknumansdorp.nl" },
-      { name: "Pharmail", sector: "SaaS", what: "Communication portal between pharmacies and care providers", url: "https://pharmail.nl" },
-      { name: "Pharmalytic", sector: "SaaS", what: "Medication review tool", url: "https://pharmalytic.nl" },
-      { name: "Apotrace", sector: "Logistics", what: "Track and trace for prescriptions", url: "https://apotrace.nl" },
-      { name: "Apotheekcijfers", sector: "Data", what: "Dashboard with monthly figures and growth", url: "https://apotheekcijfers.nl" },
-      { name: "BMI Bewust", sector: "Health", what: "Website with online intake for weight management", url: "https://bmibewust.nl" },
-      { name: "Stoppen met Roken", sector: "Healthcare", what: "Website for stop-smoking support", url: "https://hwsmr.nl" },
-      { name: "PharmaClean", sector: "Services", what: "Website for cleaning of pharmacies and care practices", url: "https://pharmaclean.nl" },
-      { name: "Apotheek Zoetermeer", sector: "Healthcare", what: "Website for a new pharmacy", url: "https://apotheekzoetermeer.nl" },
+      { name: "Apotheek Numansdorp", slug: "apotheeknumansdorp", sector: "Healthcare", what: "Pharmacy website with repeat prescriptions, hours and team page", url: "https://apotheeknumansdorp.nl" },
+      { name: "Pharmail", slug: "pharmail", sector: "SaaS", what: "Communication portal between pharmacies and care providers", url: "https://pharmail.nl" },
+      { name: "Pharmalytic", slug: "pharmalytic", sector: "SaaS", what: "Medication review tool", url: "https://pharmalytic.nl" },
+      { name: "Apotrace", slug: "apotrace", sector: "Logistics", what: "Track and trace for prescriptions", url: "https://apotrace.nl" },
+      { name: "Apotheekcijfers", slug: "apotheekcijfers", sector: "Data", what: "Dashboard with monthly figures and growth", url: "https://apotheekcijfers.nl" },
+      { name: "BMI Bewust", slug: "bmibewust", sector: "Health", what: "Website with online intake for weight management", url: "https://bmibewust.nl" },
+      { name: "Stoppen met Roken", slug: "hwsmr", sector: "Healthcare", what: "Website for stop-smoking support", url: "https://hwsmr.nl" },
+      { name: "PharmaClean", slug: "pharmaclean", sector: "Services", what: "Website for cleaning of pharmacies and care practices", url: "https://pharmaclean.nl" },
+      { name: "Apotheek Zoetermeer", slug: "apotheekzoetermeer", sector: "Healthcare", what: "Website for a new pharmacy", url: "https://apotheekzoetermeer.nl" },
     ],
   },
   packages: {
@@ -243,15 +243,15 @@ const de: Dict = {
     title: "Gebaut für meine eigenen Unternehmen, und für andere.",
     lead: "Jede Website unten ist täglich im Einsatz. Keine Konzepte, sondern funktionierende Seiten und Anwendungen mit echten Nutzern.",
     items: [
-      { name: "Apotheek Numansdorp", sector: "Gesundheit", what: "Apotheken-Website mit Folgerezepten, Öffnungszeiten und Teamseite", url: "https://apotheeknumansdorp.nl" },
-      { name: "Pharmail", sector: "SaaS", what: "Kommunikationsportal zwischen Apotheken und Leistungserbringern", url: "https://pharmail.nl" },
-      { name: "Pharmalytic", sector: "SaaS", what: "Tool für Medikationsanalysen", url: "https://pharmalytic.nl" },
-      { name: "Apotrace", sector: "Logistik", what: "Track und Trace für Rezepte", url: "https://apotrace.nl" },
-      { name: "Apotheekcijfers", sector: "Daten", what: "Dashboard mit Monatszahlen und Wachstum", url: "https://apotheekcijfers.nl" },
-      { name: "BMI Bewust", sector: "Gesundheit", what: "Website mit Online-Aufnahme für Gewichtsbegleitung", url: "https://bmibewust.nl" },
-      { name: "Stoppen met Roken", sector: "Gesundheit", what: "Website für Raucherentwöhnung", url: "https://hwsmr.nl" },
-      { name: "PharmaClean", sector: "Dienstleistung", what: "Website für die Reinigung von Apotheken und Praxen", url: "https://pharmaclean.nl" },
-      { name: "Apotheek Zoetermeer", sector: "Gesundheit", what: "Website für eine neue Apotheke", url: "https://apotheekzoetermeer.nl" },
+      { name: "Apotheek Numansdorp", slug: "apotheeknumansdorp", sector: "Gesundheit", what: "Apotheken-Website mit Folgerezepten, Öffnungszeiten und Teamseite", url: "https://apotheeknumansdorp.nl" },
+      { name: "Pharmail", slug: "pharmail", sector: "SaaS", what: "Kommunikationsportal zwischen Apotheken und Leistungserbringern", url: "https://pharmail.nl" },
+      { name: "Pharmalytic", slug: "pharmalytic", sector: "SaaS", what: "Tool für Medikationsanalysen", url: "https://pharmalytic.nl" },
+      { name: "Apotrace", slug: "apotrace", sector: "Logistik", what: "Track und Trace für Rezepte", url: "https://apotrace.nl" },
+      { name: "Apotheekcijfers", slug: "apotheekcijfers", sector: "Daten", what: "Dashboard mit Monatszahlen und Wachstum", url: "https://apotheekcijfers.nl" },
+      { name: "BMI Bewust", slug: "bmibewust", sector: "Gesundheit", what: "Website mit Online-Aufnahme für Gewichtsbegleitung", url: "https://bmibewust.nl" },
+      { name: "Stoppen met Roken", slug: "hwsmr", sector: "Gesundheit", what: "Website für Raucherentwöhnung", url: "https://hwsmr.nl" },
+      { name: "PharmaClean", slug: "pharmaclean", sector: "Dienstleistung", what: "Website für die Reinigung von Apotheken und Praxen", url: "https://pharmaclean.nl" },
+      { name: "Apotheek Zoetermeer", slug: "apotheekzoetermeer", sector: "Gesundheit", what: "Website für eine neue Apotheke", url: "https://apotheekzoetermeer.nl" },
     ],
   },
   packages: {
@@ -341,15 +341,15 @@ const me: Dict = {
     title: "Napravljeno za moje firme, i za tuđe.",
     lead: "Svaki sajt ispod je u svakodnevnoj upotrebi. Nijesu koncepti, već sajtovi i aplikacije koji rade sa pravim korisnicima.",
     items: [
-      { name: "Apotheek Numansdorp", sector: "Zdravstvo", what: "Sajt apoteke sa ponovnim receptima, radnim vremenom i timom", url: "https://apotheeknumansdorp.nl" },
-      { name: "Pharmail", sector: "SaaS", what: "Portal za komunikaciju između apoteka i zdravstvenih radnika", url: "https://pharmail.nl" },
-      { name: "Pharmalytic", sector: "SaaS", what: "Alat za pregled terapije", url: "https://pharmalytic.nl" },
-      { name: "Apotrace", sector: "Logistika", what: "Praćenje recepata", url: "https://apotrace.nl" },
-      { name: "Apotheekcijfers", sector: "Podaci", what: "Dashboard sa mjesečnim brojkama i rastom", url: "https://apotheekcijfers.nl" },
-      { name: "BMI Bewust", sector: "Zdravlje", what: "Sajt sa online prijavom za program regulacije težine", url: "https://bmibewust.nl" },
-      { name: "Stoppen met Roken", sector: "Zdravstvo", what: "Sajt za podršku pri prestanku pušenja", url: "https://hwsmr.nl" },
-      { name: "PharmaClean", sector: "Usluge", what: "Sajt za čišćenje apoteka i ordinacija", url: "https://pharmaclean.nl" },
-      { name: "Apotheek Zoetermeer", sector: "Zdravstvo", what: "Sajt za novu apoteku", url: "https://apotheekzoetermeer.nl" },
+      { name: "Apotheek Numansdorp", slug: "apotheeknumansdorp", sector: "Zdravstvo", what: "Sajt apoteke sa ponovnim receptima, radnim vremenom i timom", url: "https://apotheeknumansdorp.nl" },
+      { name: "Pharmail", slug: "pharmail", sector: "SaaS", what: "Portal za komunikaciju između apoteka i zdravstvenih radnika", url: "https://pharmail.nl" },
+      { name: "Pharmalytic", slug: "pharmalytic", sector: "SaaS", what: "Alat za pregled terapije", url: "https://pharmalytic.nl" },
+      { name: "Apotrace", slug: "apotrace", sector: "Logistika", what: "Praćenje recepata", url: "https://apotrace.nl" },
+      { name: "Apotheekcijfers", slug: "apotheekcijfers", sector: "Podaci", what: "Dashboard sa mjesečnim brojkama i rastom", url: "https://apotheekcijfers.nl" },
+      { name: "BMI Bewust", slug: "bmibewust", sector: "Zdravlje", what: "Sajt sa online prijavom za program regulacije težine", url: "https://bmibewust.nl" },
+      { name: "Stoppen met Roken", slug: "hwsmr", sector: "Zdravstvo", what: "Sajt za podršku pri prestanku pušenja", url: "https://hwsmr.nl" },
+      { name: "PharmaClean", slug: "pharmaclean", sector: "Usluge", what: "Sajt za čišćenje apoteka i ordinacija", url: "https://pharmaclean.nl" },
+      { name: "Apotheek Zoetermeer", slug: "apotheekzoetermeer", sector: "Zdravstvo", what: "Sajt za novu apoteku", url: "https://apotheekzoetermeer.nl" },
     ],
   },
   packages: {

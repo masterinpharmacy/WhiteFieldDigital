@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { dictionaries, isLocale, locales } from "@/lib/i18n";
 import ContactForm from "@/components/ContactForm";
 import LangSwitch from "@/components/LangSwitch";
+import SiteLogo from "@/components/SiteLogo";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -110,8 +111,11 @@ export default function Page({ params }: { params: { locale: string } }) {
               {t.work.items.map((w) => (
                 <li key={w.name} className="bg-white">
                   <a href={w.url} target="_blank" rel="noopener" className="group flex h-full flex-col p-6 transition hover:bg-chalk">
-                    <span className="text-sm text-stone">{w.sector}</span>
-                    <span className="mt-8 block min-h-[3.5rem] text-lg font-bold leading-snug">{w.name}</span>
+                    <span className="flex items-start justify-between gap-4">
+                      <SiteLogo slug={w.slug} name={w.name} />
+                      <span className="text-sm text-stone">{w.sector}</span>
+                    </span>
+                    <span className="mt-6 block min-h-[3.5rem] text-lg font-bold leading-snug">{w.name}</span>
                     <span className="mt-1 block min-h-[2.5rem] text-sm leading-relaxed text-stone">{w.what}</span>
                     <span className="mt-auto block pt-4 text-sm font-medium text-field underline-offset-4 group-hover:underline">
                       {w.url.replace("https://", "")}
