@@ -54,9 +54,10 @@ const nl: Dict = {
       { name: "Pharmalytic", sector: "SaaS", what: "Tool voor medicatiebeoordelingen", url: "https://pharmalytic.nl" },
       { name: "Apotrace", sector: "Logistiek", what: "Track en trace voor recepten", url: "https://apotrace.nl" },
       { name: "Apotheekcijfers", sector: "Data", what: "Dashboard met maandcijfers en groei", url: "https://apotheekcijfers.nl" },
-      { name: "Obrov Real Estate", sector: "Vastgoed", what: "Meertalige website en huisstijl", url: "https://obrovrealestate.nl" },
       { name: "BMI Bewust", sector: "Gezondheid", what: "Website met online intake voor gewichtsbegeleiding", url: "https://bmibewust.nl" },
-      { name: "Eerste Ademteug", sector: "Zorg", what: "Website voor stoppen-met-roken begeleiding", url: "https://hwsmr.nl" },
+      { name: "Stoppen met Roken", sector: "Zorg", what: "Website voor stoppen-met-roken begeleiding", url: "https://hwsmr.nl" },
+      { name: "PharmaClean", sector: "Dienstverlening", what: "Website voor schoonmaak van apotheken en zorgpraktijken", url: "https://pharmaclean.nl" },
+      { name: "Apotheek Zoetermeer", sector: "Zorg", what: "Website voor een nieuwe apotheek", url: "https://apotheekzoetermeer.nl" },
     ],
   },
   packages: {
@@ -105,7 +106,7 @@ const nl: Dict = {
   about: {
     title: "Ondernemer eerst, bouwer daarna.",
     paragraphs: [
-      "Ik ben Arnel Medjedovic. Naast apotheker en eigenaar van meerdere bedrijven in zorg, vastgoed en dienstverlening bouw ik al jaren mijn eigen websites en software. Alles wat ik voor mezelf heb gebouwd, kan ik ook voor jou bouwen.",
+      "Ik ben Arnel Medjedovic. Naast apotheker en eigenaar van meerdere bedrijven in zorg en dienstverlening bouw ik al jaren mijn eigen websites en software. Alles wat ik voor mezelf heb gebouwd, kan ik ook voor jou bouwen.",
       "Het verschil met een bureau: ik weet wat een website moet opleveren, omdat ik zelf elke dag klanten, personeel en cijfers heb. Ik praat je niet vol met jargon en ik lever wat is afgesproken.",
     ],
     stack: "Gebouwd met Next.js, Tailwind, Supabase en Vercel. Snel, veilig en zonder maandelijkse licenties voor pluginbouwers.",
@@ -150,9 +151,10 @@ const en: Dict = {
       { name: "Pharmalytic", sector: "SaaS", what: "Medication review tool", url: "https://pharmalytic.nl" },
       { name: "Apotrace", sector: "Logistics", what: "Track and trace for prescriptions", url: "https://apotrace.nl" },
       { name: "Apotheekcijfers", sector: "Data", what: "Dashboard with monthly figures and growth", url: "https://apotheekcijfers.nl" },
-      { name: "Obrov Real Estate", sector: "Real estate", what: "Multilingual website and brand identity", url: "https://obrovrealestate.nl" },
       { name: "BMI Bewust", sector: "Health", what: "Website with online intake for weight management", url: "https://bmibewust.nl" },
-      { name: "Eerste Ademteug", sector: "Healthcare", what: "Website for stop-smoking support", url: "https://hwsmr.nl" },
+      { name: "Stoppen met Roken", sector: "Healthcare", what: "Website for stop-smoking support", url: "https://hwsmr.nl" },
+      { name: "PharmaClean", sector: "Services", what: "Website for cleaning of pharmacies and care practices", url: "https://pharmaclean.nl" },
+      { name: "Apotheek Zoetermeer", sector: "Healthcare", what: "Website for a new pharmacy", url: "https://apotheekzoetermeer.nl" },
     ],
   },
   packages: {
@@ -201,7 +203,7 @@ const en: Dict = {
   about: {
     title: "Entrepreneur first, builder second.",
     paragraphs: [
-      "I'm Arnel Medjedovic. Alongside my work as a pharmacist and owner of several companies in healthcare, real estate and services, I've been building my own websites and software for years. Everything I've built for myself, I can build for you.",
+      "I'm Arnel Medjedovic. Alongside my work as a pharmacist and owner of several companies in healthcare and services, I've been building my own websites and software for years. Everything I've built for myself, I can build for you.",
       "The difference with an agency: I know what a website has to deliver, because I deal with customers, staff and numbers every day. No jargon, and I deliver what we agreed on.",
     ],
     stack: "Built with Next.js, Tailwind, Supabase and Vercel. Fast, secure and without monthly plugin licences.",
@@ -246,9 +248,10 @@ const de: Dict = {
       { name: "Pharmalytic", sector: "SaaS", what: "Tool für Medikationsanalysen", url: "https://pharmalytic.nl" },
       { name: "Apotrace", sector: "Logistik", what: "Track und Trace für Rezepte", url: "https://apotrace.nl" },
       { name: "Apotheekcijfers", sector: "Daten", what: "Dashboard mit Monatszahlen und Wachstum", url: "https://apotheekcijfers.nl" },
-      { name: "Obrov Real Estate", sector: "Immobilien", what: "Mehrsprachige Website und Markenauftritt", url: "https://obrovrealestate.nl" },
       { name: "BMI Bewust", sector: "Gesundheit", what: "Website mit Online-Aufnahme für Gewichtsbegleitung", url: "https://bmibewust.nl" },
-      { name: "Eerste Ademteug", sector: "Gesundheit", what: "Website für Raucherentwöhnung", url: "https://hwsmr.nl" },
+      { name: "Stoppen met Roken", sector: "Gesundheit", what: "Website für Raucherentwöhnung", url: "https://hwsmr.nl" },
+      { name: "PharmaClean", sector: "Dienstleistung", what: "Website für die Reinigung von Apotheken und Praxen", url: "https://pharmaclean.nl" },
+      { name: "Apotheek Zoetermeer", sector: "Gesundheit", what: "Website für eine neue Apotheke", url: "https://apotheekzoetermeer.nl" },
     ],
   },
   packages: {
@@ -297,7 +300,7 @@ const de: Dict = {
   about: {
     title: "Zuerst Unternehmer, dann Entwickler.",
     paragraphs: [
-      "Ich bin Arnel Medjedovic. Neben meiner Arbeit als Apotheker und Inhaber mehrerer Unternehmen in Gesundheit, Immobilien und Dienstleistung baue ich seit Jahren meine eigenen Websites und Software. Alles, was ich für mich selbst gebaut habe, kann ich auch für Sie bauen.",
+      "Ich bin Arnel Medjedovic. Neben meiner Arbeit als Apotheker und Inhaber mehrerer Unternehmen in Gesundheit und Dienstleistung baue ich seit Jahren meine eigenen Websites und Software. Alles, was ich für mich selbst gebaut habe, kann ich auch für Sie bauen.",
       "Der Unterschied zu einer Agentur: Ich weiß, was eine Website bringen muss, weil ich täglich mit Kunden, Personal und Zahlen zu tun habe. Kein Fachjargon, und ich liefere, was vereinbart ist.",
     ],
     stack: "Gebaut mit Next.js, Tailwind, Supabase und Vercel. Schnell, sicher und ohne monatliche Plugin-Lizenzen.",
@@ -343,9 +346,10 @@ const me: Dict = {
       { name: "Pharmalytic", sector: "SaaS", what: "Alat za pregled terapije", url: "https://pharmalytic.nl" },
       { name: "Apotrace", sector: "Logistika", what: "Praćenje recepata", url: "https://apotrace.nl" },
       { name: "Apotheekcijfers", sector: "Podaci", what: "Dashboard sa mjesečnim brojkama i rastom", url: "https://apotheekcijfers.nl" },
-      { name: "Obrov Real Estate", sector: "Nekretnine", what: "Višejezični sajt i vizuelni identitet", url: "https://obrovrealestate.nl" },
       { name: "BMI Bewust", sector: "Zdravlje", what: "Sajt sa online prijavom za program regulacije težine", url: "https://bmibewust.nl" },
-      { name: "Eerste Ademteug", sector: "Zdravstvo", what: "Sajt za podršku pri prestanku pušenja", url: "https://hwsmr.nl" },
+      { name: "Stoppen met Roken", sector: "Zdravstvo", what: "Sajt za podršku pri prestanku pušenja", url: "https://hwsmr.nl" },
+      { name: "PharmaClean", sector: "Usluge", what: "Sajt za čišćenje apoteka i ordinacija", url: "https://pharmaclean.nl" },
+      { name: "Apotheek Zoetermeer", sector: "Zdravstvo", what: "Sajt za novu apoteku", url: "https://apotheekzoetermeer.nl" },
     ],
   },
   packages: {
@@ -394,7 +398,7 @@ const me: Dict = {
   about: {
     title: "Prvo preduzetnik, pa programer.",
     paragraphs: [
-      "Ja sam Arnel Međedović. Pored posla farmaceuta i vlasnika više firmi u zdravstvu, nekretninama i uslugama, godinama pravim sopstvene sajtove i softver. Sve što sam napravio za sebe, mogu da napravim i za vas.",
+      "Ja sam Arnel Međedović. Pored posla farmaceuta i vlasnika više firmi u zdravstvu i uslugama, godinama pravim sopstvene sajtove i softver. Sve što sam napravio za sebe, mogu da napravim i za vas.",
       "Razlika u odnosu na agenciju: znam šta sajt mora da donese, jer se svaki dan bavim klijentima, zaposlenima i brojkama. Bez žargona, i isporučujem ono što je dogovoreno.",
     ],
     stack: "Napravljeno sa Next.js, Tailwind, Supabase i Vercel. Brzo, bezbjedno i bez mjesečnih licenci za plugine.",

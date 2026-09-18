@@ -106,17 +106,15 @@ export default function Page({ params }: { params: { locale: string } }) {
           <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">{t.work.title}</h2>
             <p className="mt-4 max-w-2xl text-stone">{t.work.lead}</p>
-            <ul className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+            <ul className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
               {t.work.items.map((w) => (
                 <li key={w.name} className="bg-white">
-                  <a href={w.url} target="_blank" rel="noopener" className="group flex h-full flex-col justify-between gap-8 p-6 transition hover:bg-chalk">
+                  <a href={w.url} target="_blank" rel="noopener" className="group flex h-full flex-col p-6 transition hover:bg-chalk">
                     <span className="text-sm text-stone">{w.sector}</span>
-                    <span>
-                      <span className="block text-lg font-bold">{w.name}</span>
-                      <span className="mt-1 block text-sm leading-relaxed text-stone">{w.what}</span>
-                      <span className="mt-3 block text-sm font-medium text-field underline-offset-4 group-hover:underline">
-                        {w.url.replace("https://", "")}
-                      </span>
+                    <span className="mt-8 block min-h-[3.5rem] text-lg font-bold leading-snug">{w.name}</span>
+                    <span className="mt-1 block min-h-[2.5rem] text-sm leading-relaxed text-stone">{w.what}</span>
+                    <span className="mt-auto block pt-4 text-sm font-medium text-field underline-offset-4 group-hover:underline">
+                      {w.url.replace("https://", "")}
                     </span>
                   </a>
                 </li>
