@@ -60,10 +60,11 @@ export default function Page({ params }: { params: { locale: string } }) {
             <Logo />
           </Link>
           <nav className="hidden items-center gap-7 text-sm font-medium text-stone md:flex">
+            <a href="#services" className="hover:text-ink">{t.nav.services}</a>
             <a href="#work" className="hover:text-ink">{t.nav.work}</a>
             <a href="#packages" className="hover:text-ink">{t.nav.packages}</a>
             <a href="#process" className="hover:text-ink">{t.nav.process}</a>
-            <a href="#about" className="hover:text-ink">{t.nav.about}</a>
+            <a href="#faq" className="hover:text-ink">{t.nav.faq}</a>
           </nav>
           <div className="flex items-center gap-3">
             <LangSwitch current={locale} label={t.footer.langs} />
@@ -107,6 +108,29 @@ export default function Page({ params }: { params: { locale: string } }) {
           </div>
         </section>
 
+        <section id="services" className="scroll-mt-20">
+          <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+            <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">{t.services.title}</h2>
+            <p className="mt-4 max-w-2xl text-stone">{t.services.lead}</p>
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {t.services.items.map((sv, i) => (
+                <article key={sv.title} className="flex gap-5 rounded-2xl border border-ink/10 p-6 md:p-7">
+                  <span aria-hidden className="mt-1 grid h-9 w-9 shrink-0 grid-cols-2 gap-0.5">
+                    {[0, 1, 2, 3].map((k) => (
+                      <span key={k} className={`rounded-[2px] ${k === i ? "bg-field" : "border border-ink/25"}`} />
+                    ))}
+                  </span>
+                  <span>
+                    <h3 className="text-xl font-bold">{sv.title}</h3>
+                    <p className="mt-2 leading-relaxed text-stone">{sv.text}</p>
+                    <p className="mt-3 text-sm text-field">{sv.examples}</p>
+                  </span>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="work" className="scroll-mt-20">
           <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">{t.work.title}</h2>
@@ -128,6 +152,24 @@ export default function Page({ params }: { params: { locale: string } }) {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section id="proof" className="bg-chalk">
+          <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
+            <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">{t.proof.title}</h2>
+            <dl className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {t.proof.stats.map((st) => (
+                <div key={st.label} className="border-t-2 border-field pt-5">
+                  <dd className="text-4xl font-extrabold tracking-tight md:text-5xl">{st.value}</dd>
+                  <dt className="mt-2 text-sm text-stone">{st.label}</dt>
+                </div>
+              ))}
+            </dl>
+            <figure className="mt-16 max-w-3xl">
+              <blockquote className="text-xl font-medium leading-relaxed md:text-2xl">{t.proof.quote}</blockquote>
+              <figcaption className="mt-4 text-sm text-stone">{t.proof.quoteBy}</figcaption>
+            </figure>
           </div>
         </section>
 
@@ -197,6 +239,26 @@ export default function Page({ params }: { params: { locale: string } }) {
                 <p key={p}>{p}</p>
               ))}
               <p className="text-sm text-stone">{t.about.stack}</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="scroll-mt-20">
+          <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:grid-cols-[1fr_1.6fr] md:py-28">
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">{t.faq.title}</h2>
+            <div className="divide-y divide-ink/10 border-y border-ink/10">
+              {t.faq.items.map((f) => (
+                <details key={f.q} className="group py-5">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                    {f.q}
+                    <span aria-hidden className="relative h-5 w-5 shrink-0">
+                      <span className="absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 bg-ink" />
+                      <span className="absolute left-1/2 top-0 h-5 w-0.5 -translate-x-1/2 bg-ink transition group-open:rotate-90" />
+                    </span>
+                  </summary>
+                  <p className="mt-3 max-w-2xl leading-relaxed text-stone">{f.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
