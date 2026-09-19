@@ -11,31 +11,31 @@ export function generateStaticParams() {
 const copy: Record<Locale, { title: string; lead: string; back: string; cta: string; chapters: string[] }> = {
   nl: {
     title: "Demo",
-    lead: "In een halve minuut: wat ik bouw, voor wie, en hoe het werkt.",
+    lead: "In een halve minuut: wat White Field Digital bouwt, voor wie, en hoe het werkt.",
     back: "Terug naar de site",
-    cta: "Plan een gesprek",
-    chapters: ["Websites voor elke branche", "Gebouwd en dagelijks in gebruik", "Drie pakketten, één vaste prijs", "In vier stappen online"],
+    cta: "Neem contact op",
+    chapters: ["Websites voor elke branche", "Opgeleverd werk", "Drie pakketten, één vaste prijs", "In vier stappen online"],
   },
   en: {
     title: "Demo",
-    lead: "Half a minute on what I build, for whom, and how it works.",
+    lead: "Half a minute on what White Field Digital builds, for whom, and how it works.",
     back: "Back to the site",
-    cta: "Book a call",
-    chapters: ["Websites for every industry", "Built and in daily use", "Three packages, one fixed price", "Online in four steps"],
+    cta: "Get in touch",
+    chapters: ["Websites for every industry", "Delivered work", "Three packages, one fixed price", "Online in four steps"],
   },
   de: {
     title: "Demo",
-    lead: "In einer halben Minute: was ich baue, für wen, und wie es abläuft.",
+    lead: "In einer halben Minute: was White Field Digital entwickelt, für wen, und wie es abläuft.",
     back: "Zurück zur Website",
-    cta: "Gespräch vereinbaren",
-    chapters: ["Websites für jede Branche", "Gebaut und täglich im Einsatz", "Drei Pakete, ein Festpreis", "In vier Schritten online"],
+    cta: "Kontakt aufnehmen",
+    chapters: ["Websites für jede Branche", "Realisierte Projekte", "Drei Pakete, ein Festpreis", "In vier Schritten online"],
   },
   me: {
     title: "Demo",
-    lead: "Za pola minuta: šta pravim, za koga, i kako to ide.",
+    lead: "Za pola minuta: šta White Field Digital razvija, za koga, i kako to ide.",
     back: "Nazad na sajt",
-    cta: "Zakažite razgovor",
-    chapters: ["Web sajtovi za svaku branšu", "Napravljeno i u svakodnevnoj upotrebi", "Tri paketa, jedna fiksna cijena", "Online u četiri koraka"],
+    cta: "Kontaktirajte nas",
+    chapters: ["Web sajtovi za svaku branšu", "Realizovani projekti", "Tri paketa, jedna fiksna cijena", "Online u četiri koraka"],
   },
 };
 

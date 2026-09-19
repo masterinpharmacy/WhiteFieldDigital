@@ -155,21 +155,18 @@ export default function Page({ params }: { params: { locale: string } }) {
           </div>
         </section>
 
-        <section id="proof" className="bg-chalk">
+        <section id="principles" className="bg-chalk">
           <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
-            <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">{t.proof.title}</h2>
-            <dl className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {t.proof.stats.map((st) => (
-                <div key={st.label} className="border-t-2 border-field pt-5">
-                  <dd className="text-4xl font-extrabold tracking-tight md:text-5xl">{st.value}</dd>
-                  <dt className="mt-2 text-sm text-stone">{st.label}</dt>
+            <h2 className="max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">{t.principles.title}</h2>
+            <p className="mt-4 max-w-2xl text-stone">{t.principles.lead}</p>
+            <div className="mt-12 grid gap-10 md:grid-cols-3">
+              {t.principles.items.map((pr) => (
+                <div key={pr.title} className="border-t-2 border-field pt-5">
+                  <h3 className="text-lg font-bold">{pr.title}</h3>
+                  <p className="mt-2 leading-relaxed text-stone">{pr.text}</p>
                 </div>
               ))}
-            </dl>
-            <figure className="mt-16 max-w-3xl">
-              <blockquote className="text-xl font-medium leading-relaxed md:text-2xl">{t.proof.quote}</blockquote>
-              <figcaption className="mt-4 text-sm text-stone">{t.proof.quoteBy}</figcaption>
-            </figure>
+            </div>
           </div>
         </section>
 

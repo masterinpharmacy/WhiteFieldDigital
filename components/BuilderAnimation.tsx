@@ -8,7 +8,7 @@ export default function BuilderAnimation() {
           <span className="h-2.5 w-2.5 rounded-full bg-ink/15" />
           <span className="h-2.5 w-2.5 rounded-full bg-ink/15" />
           <span className="ml-3 flex h-5 flex-1 items-center rounded-full bg-chalk px-3 text-[10px] text-stone">
-            <span className="b-url">jouwbedrijf.nl</span>
+            <span className="b-url">uwbedrijf.nl</span>
           </span>
         </div>
         <div className="grid gap-3 p-5">
@@ -36,10 +36,10 @@ export default function BuilderAnimation() {
         </svg>
       </div>
       <div className="b-chip absolute -left-3 top-10 rounded-full border border-ink/10 bg-white px-3 py-1 text-xs font-semibold shadow-sm">
-        &lt;/&gt; gebouwd
+        ontwerp op maat
       </div>
       <div className="b-chip2 absolute -right-2 bottom-8 rounded-full bg-field px-3 py-1 text-xs font-semibold text-white shadow-sm">
-        live in 7 dagen
+        online binnen een week
       </div>
     </div>
   );
