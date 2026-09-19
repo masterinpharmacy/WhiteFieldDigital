@@ -18,3 +18,28 @@ body { @apply bg-white text-ink antialiased; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }
 :focus-visible { outline: 2px solid #1E6B3C; outline-offset: 3px; }
+
+/* Builder-animatie: blokken verschijnen na elkaar, cursor plaatst ze, dan loop (9s) */
+.builder .b { opacity: 0; transform: translateY(10px) scale(0.98); animation: bpop 9s ease-out infinite; }
+.builder .b1 { animation-delay: 0.6s } .builder .b2 { animation-delay: 1.4s } .builder .b3 { animation-delay: 2.0s }
+.builder .b4 { animation-delay: 2.7s } .builder .b5 { animation-delay: 3.5s } .builder .b6 { animation-delay: 4.0s } .builder .b7 { animation-delay: 4.5s }
+@keyframes bpop {
+  0% { opacity: 0; transform: translateY(10px) scale(0.98) }
+  4%, 88% { opacity: 1; transform: translateY(0) scale(1) }
+  95%, 100% { opacity: 0; transform: translateY(10px) scale(0.98) }
+}
+.builder .b-cursor { animation: bcursor 9s ease-in-out infinite; left: 60%; top: 30%; }
+@keyframes bcursor {
+  0% { left: 70%; top: 8% } 7% { left: 12%; top: 16% } 16% { left: 20%; top: 36% } 22% { left: 30%; top: 46% }
+  30% { left: 18%; top: 58% } 39% { left: 22%; top: 82% } 44% { left: 50%; top: 82% } 50% { left: 80%; top: 82% }
+  60%, 100% { left: 90%; top: 95% }
+}
+.builder .b-url { display: inline-block; overflow: hidden; white-space: nowrap; width: 0; border-right: 1px solid #6B7368; animation: btype 9s steps(14) infinite; }
+@keyframes btype { 0% { width: 0 } 6%, 90% { width: 7.5em } 100% { width: 0 } }
+.builder .b-chip, .builder .b-chip2 { opacity: 0; animation: bchip 9s ease-out infinite; }
+.builder .b-chip { animation-delay: 5.2s } .builder .b-chip2 { animation-delay: 5.8s }
+@keyframes bchip { 0% { opacity: 0; transform: translateY(6px) } 3%, 85% { opacity: 1; transform: translateY(0) } 92%, 100% { opacity: 0 } }
+@media (prefers-reduced-motion: reduce) {
+  .builder .b, .builder .b-chip, .builder .b-chip2 { animation: none; opacity: 1; transform: none }
+  .builder .b-cursor { display: none } .builder .b-url { animation: none; width: auto; border: 0 }
+}

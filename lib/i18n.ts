@@ -124,7 +124,7 @@ const nl: Dict = {
     error: "Versturen lukte niet. Mail me direct via info@whitefielddigital.nl.",
     alt: "Liever direct mailen?",
   },
-  footer: { line: "White Field Digital, Numansdorp. Onderdeel van White Field Holding BV.", langs: "Taal" },
+  footer: { line: "White Field Digital, Numansdorp. Onderdeel van Pharmail BV.", langs: "Taal" },
 };
 
 const en: Dict = {
@@ -221,7 +221,7 @@ const en: Dict = {
     error: "Sending failed. Email me directly at info@whitefielddigital.nl.",
     alt: "Prefer to email directly?",
   },
-  footer: { line: "White Field Digital, Numansdorp, the Netherlands. Part of White Field Holding BV.", langs: "Language" },
+  footer: { line: "White Field Digital, Numansdorp, the Netherlands. Part of Pharmail BV.", langs: "Language" },
 };
 
 const de: Dict = {
@@ -318,7 +318,7 @@ const de: Dict = {
     error: "Senden fehlgeschlagen. Schreiben Sie mir direkt an info@whitefielddigital.nl.",
     alt: "Lieber direkt mailen?",
   },
-  footer: { line: "White Field Digital, Numansdorp, Niederlande. Teil der White Field Holding BV.", langs: "Sprache" },
+  footer: { line: "White Field Digital, Numansdorp, Niederlande. Teil der Pharmail BV.", langs: "Sprache" },
 };
 
 
@@ -416,7 +416,7 @@ const me: Dict = {
     error: "Slanje nije uspjelo. Pišite mi direktno na info@whitefielddigital.nl.",
     alt: "Radije direktno mailom?",
   },
-  footer: { line: "White Field Digital, Numansdorp, Holandija. Dio White Field Holding BV.", langs: "Jezik" },
+  footer: { line: "White Field Digital, Numansdorp, Holandija. Dio Pharmail BV.", langs: "Jezik" },
 };
 
 export const dictionaries: Record<Locale, Dict> = { nl, en, de, me };

@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { dictionaries, isLocale, locales } from "@/lib/i18n";
 import ContactForm from "@/components/ContactForm";
 import LangSwitch from "@/components/LangSwitch";
-import SiteLogo from "@/components/SiteLogo";
+import SiteThumb from "@/components/SiteThumb";
+import BuilderAnimation from "@/components/BuilderAnimation";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -76,8 +77,9 @@ export default function Page({ params }: { params: { locale: string } }) {
       <main>
         <section className="relative overflow-hidden">
           <div aria-hidden className="field-grid absolute inset-0" />
-          <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-20 md:pb-24 md:pt-32">
-            <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-16 pt-16 md:pb-24 md:pt-24 lg:grid-cols-[1.2fr_1fr]">
+            <div>
+            <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
               {t.hero.title}
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-stone md:text-xl">{t.hero.lead}</p>
@@ -90,6 +92,8 @@ export default function Page({ params }: { params: { locale: string } }) {
               </a>
               <span className="text-sm text-stone">{t.hero.note}</span>
             </div>
+            </div>
+            <BuilderAnimation />
           </div>
           <div className="relative border-y border-ink/10 bg-chalk py-4">
             <div className="flex w-max whitespace-nowrap marquee">
@@ -110,14 +114,14 @@ export default function Page({ params }: { params: { locale: string } }) {
             <ul className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
               {t.work.items.map((w) => (
                 <li key={w.name} className="bg-white">
-                  <a href={w.url} target="_blank" rel="noopener" className="group flex h-full flex-col p-6 transition hover:bg-chalk">
-                    <span className="flex items-start justify-between gap-4">
-                      <SiteLogo slug={w.slug} name={w.name} />
-                      <span className="text-sm text-stone">{w.sector}</span>
+                  <a href={w.url} target="_blank" rel="noopener" className="group flex h-full flex-col p-5 transition hover:bg-chalk">
+                    <SiteThumb slug={w.slug} name={w.name} />
+                    <span className="mt-5 flex items-baseline justify-between gap-3">
+                      <span className="text-lg font-bold leading-snug">{w.name}</span>
+                      <span className="shrink-0 text-sm text-stone">{w.sector}</span>
                     </span>
-                    <span className="mt-6 block min-h-[3.5rem] text-lg font-bold leading-snug">{w.name}</span>
-                    <span className="mt-1 block min-h-[2.5rem] text-sm leading-relaxed text-stone">{w.what}</span>
-                    <span className="mt-auto block pt-4 text-sm font-medium text-field underline-offset-4 group-hover:underline">
+                    <span className="mt-3 block min-h-[2.5rem] text-sm leading-relaxed text-stone">{w.what}</span>
+                    <span className="mt-auto block pt-3 text-sm font-medium text-field underline-offset-4 group-hover:underline">
                       {w.url.replace("https://", "")}
                     </span>
                   </a>
