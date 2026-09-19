@@ -119,8 +119,8 @@ const nl: Dict = {
   proof: {
     title: "Geen bureau, wel bewezen.",
     stats: [
-      { value: "9", label: "sites en applicaties live" },
-      { value: "2", label: "eigen bedrijven waar ze dagelijks draaien" },
+      { value: "9", label: "sites en applicaties live en dagelijks in gebruik" },
+      { value: "2", label: "eigen bedrijven waarvoor ik zelf bouw en beheer" },
       { value: "< 1 week", label: "van gesprek tot live one-page" },
       { value: "1", label: "aanspreekpunt, van begin tot eind" },
     ],
@@ -248,8 +248,8 @@ const en: Dict = {
   proof: {
     title: "Not an agency, but proven.",
     stats: [
-      { value: "9", label: "sites and applications live" },
-      { value: "2", label: "own companies where they run daily" },
+      { value: "9", label: "sites and applications live and in daily use" },
+      { value: "2", label: "own companies I build and manage for" },
       { value: "< 1 week", label: "from first call to live one-page" },
       { value: "1", label: "point of contact, start to finish" },
     ],
@@ -377,8 +377,8 @@ const de: Dict = {
   proof: {
     title: "Keine Agentur, aber bewährt.",
     stats: [
-      { value: "9", label: "Websites und Anwendungen online" },
-      { value: "2", label: "eigene Unternehmen, in denen sie täglich laufen" },
+      { value: "9", label: "Websites und Anwendungen online und täglich im Einsatz" },
+      { value: "2", label: "eigene Unternehmen, für die ich selbst baue und betreue" },
       { value: "< 1 Woche", label: "vom Gespräch bis zur One-Page online" },
       { value: "1", label: "Ansprechpartner, von Anfang bis Ende" },
     ],
@@ -507,8 +507,8 @@ const me: Dict = {
   proof: {
     title: "Nije agencija, ali je provjereno.",
     stats: [
-      { value: "9", label: "sajtova i aplikacija online" },
-      { value: "2", label: "sopstvene firme u kojima rade svaki dan" },
+      { value: "9", label: "sajtova i aplikacija online i u svakodnevnoj upotrebi" },
+      { value: "2", label: "sopstvene firme za koje sam gradim i održavam" },
       { value: "< 1 nedjelja", label: "od razgovora do one-page sajta online" },
       { value: "1", label: "sagovornik, od početka do kraja" },
     ],
